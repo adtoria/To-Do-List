@@ -1,2 +1,1 @@
-# to-do-list
-To Do List for OpenCode '21
+### To Do List for OpenCode '21
