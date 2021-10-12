@@ -25,6 +25,18 @@ function newTaskLength() {
 	return newTask.value.trim().length && newTask.value.length;
 }
 
+function addTaskOnPress(event) {
+    if(newTaskLength() > 0 && event.keyCode === 13)
+        addTask();
+    if(event.keyCode === 27)
+        newTask.value = "";
+}
+
+function addTaskOnClick() {
+    if(newTaskLength() > 0)
+        addTask();
+}
+
 function toggleDone() {
 	event.target.classList.toggle("completed");
 }
@@ -36,16 +48,4 @@ function deleteTask() {
 
 for(var buttonEvent of deleteItem) {
 	buttonEvent.addEventListener("click", deleteTask);	
-}
-
-function addTaskOnPress(event) {
-    if(newTaskLength() > 0 && event.keyCode === 13)
-        addTask();
-    if(event.keyCode === 27)
-        newTask.value = "";
-}
-
-function addTaskOnClick() {
-    if(newTaskLength() > 0)
-        addTask();
 }
