@@ -91,7 +91,9 @@ ol {
     cursor: pointer;
     border: none;
     border-radius: 100%;
+    height: 25px;
     transition: 0.4s;
+    width: 25px;
 }
 
 .delete:hover{
